@@ -16,14 +16,7 @@ import java.util.Map;
 import java.util.Set;
 
 
-/**
- * <p>功能描述</br> websocket的处理类 </p>
- *
- * @className WebsocketEndPoint
- * @author jiangyu
- * @date 2016年11月11日 下午1:52:55
- * @version v1.0
- */
+
 @Component
 public class TextMessageHandler extends TextWebSocketHandler
 {
@@ -38,9 +31,7 @@ public class TextMessageHandler extends TextWebSocketHandler
 
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
-        /**
-         * 链接成功之后会触发此方法，可在此处对离线消息什么的进行处理
-         */
+        
         users.put(session.getId(),session);
         String username = (String) session.getAttributes().get(DEFAULT_WEBSOCKET_USERNAME);
         if (CollectionUtil.isEmpty(username)){
@@ -96,11 +87,7 @@ public class TextMessageHandler extends TextWebSocketHandler
         }
     }
 
-    /**
-     * 发送单一的消息处理
-     * @param textMessage
-     * @param session
-     */
+    
     private void singleSendMessageHandle(TextMessage textMessage, WebSocketSession session) {
         try {
             if (session.isOpen()){
