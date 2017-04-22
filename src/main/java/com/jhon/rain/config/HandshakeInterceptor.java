@@ -10,14 +10,7 @@ import org.springframework.web.socket.server.support.HttpSessionHandshakeInterce
 import java.util.Map;
 
 
-/**
- * <p>功能描述</br> 握手接口 </p>
- * 
- * @className HandshakeInterceptor
- * @author jiangyu
- * @date 2016年11月11日 下午1:54:36
- * @version v1.0
- */
+
 @Component
 public class HandshakeInterceptor extends HttpSessionHandshakeInterceptor
 {
