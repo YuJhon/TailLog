@@ -9,14 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.io.IOException;
 import java.io.InputStream;
 
-/**
- * <p>WebSocket的测试类</p>
- *
- * @author jiangyu
- * @version v1.0
- * @className WebSocketController
- * @create 2016-12-07 20:29
- */
+
 @Controller
 @RequestMapping("/debug")
 public class WebSocketController
